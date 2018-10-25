@@ -144,7 +144,7 @@ However, we should generate our container components with the React Redux librar
 
 The `connect()` methods involves two means to interract with the store:
 - `mapStateToProps`: this function is subscribed to the store, meaning that it will be called when the state changes. The container component can READ via this.
-- `mapDispatchToProps`: this function contains the `dispatch` method of the store, allow us to define some callback functions that dispatch actions to the store. Thus, the container component can WRITE via this.
+- `mapDispatchToProps`: this function contains the `dispatch` method of the store, allow us to define some callback functions that dispatch actions to the store. Thus, the container component can WRITE via this. Notice that if this function is not passed to `connect()`, the container component's props will by default receive the `dispatch` function (used to dispatch actions to the store).
 
 Hopefully everything now makes sense when you read the source of `containers/`.
 
